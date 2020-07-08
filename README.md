@@ -13,17 +13,16 @@ Folder utils: containing alternative MTL algorithms among which MMDT algorithm, 
 Folder datasets: containing Office+Caltech dataset Mit-Bih dataset and Mnist dataset.
 
 
-#Code for binary MTL LSSVM
+# Code for binary MTL LSSVM
 Algorithm 1 of the main paper training and optimizing a binary MTL LSSVM is implemented in the function ``MTLLSSVMTrain_binary.m``. As example to test the function see ``binary_experiments`` for an experiment on synthetic data (Figure 3 of the main paper). For experiments on real dataset (MNIST dataset), see script ``MNIST_experiments.m`` (for Figure 4 of the main paper) and ``more_task_experiments`` for experiments on more than one task (Figure 5 of the main paper). As general guidelines to test the code, run the algorithm for synthetic dataset (check that the theoretical predictions are close with the gaussian histogram appearing) and then test on real dataset.
 \section{Code for multi class MTL LSSVM}
 For multi class classification, the code implementing respectively Algorithm 4, 5 and 6 are respectively in the functions ``RMTMTLLSSVM_train_one_all``, ``RMTMTLLSSVM_train_one_one``, ``RMTMTLLSSVM_train_one_hot``. To test the different functions, please use ``compare_MTL_general`` (to obtain as example Table~3 of the main paper). For a simple version (fast algorithm) but considering a naive multi class extension please see function ``RMTMTLLSSVM_train.m`` and to test the script ``compare_MTL`` (to reproduce Table 1 and 4).
 
-#Code CompareMTL.m
+# Code CompareMTL.m
 The different options proposed to execute the script ``CompareMTL.m`` comparing the different Multi Task algorithms are as follows:
     dataset to be chosen as 'a-d' such that  a (for the source) and d (for target) are chosen between \textit{A for Amazon}, \textit{Ca for Caltech}, \textit{D for DSLR}, \textit{W for Webcam}. For illustration, for a MTL with source task Amazon and target task Caltech, the setting is ``dataset='A-Ca'``
     ``number_trials`` which represents the number of trials to be tested for each dataset in order to average performances.
     
-#Code PFA.m
+# Code PFA.m
 The different options proposed to execute the script PFA.m are as follows:
-data to be chosen between 'synthetic' and \textit{'real'} to test the binary classification with fixed probability of false alarm either on synthetic data or real data.
-``n_training_sample`` is the number of training examples to be sampled from the overall training set.
+data to be chosen between 'synthetic' and \textit{'real'} to test the binary classification with fixed probability of false alarm either on synthetic data or real data.``n_training_sample`` is the number of training examples to be sampled from the overall training set.
