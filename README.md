@@ -15,7 +15,8 @@ Folder datasets: containing Office+Caltech dataset Mit-Bih dataset and Mnist dat
 
 # Code for binary MTL LSSVM
 Algorithm 1 of the main paper training and optimizing a binary MTL LSSVM is implemented in the function ``MTLLSSVMTrain_binary.m``. As example to test the function see ``binary_experiments`` for an experiment on synthetic data (Figure 3 of the main paper). For experiments on real dataset (MNIST dataset), see script ``MNIST_experiments.m`` (for Figure 4 of the main paper) and ``more_task_experiments`` for experiments on more than one task (Figure 5 of the main paper). As general guidelines to test the code, run the algorithm for synthetic dataset (check that the theoretical predictions are close with the gaussian histogram appearing) and then test on real dataset.
-\section{Code for multi class MTL LSSVM}
+
+# Code for multi class MTL LSSVM
 For multi class classification, the code implementing respectively Algorithm 4, 5 and 6 are respectively in the functions ``RMTMTLLSSVM_train_one_all``, ``RMTMTLLSSVM_train_one_one``, ``RMTMTLLSSVM_train_one_hot``. To test the different functions, please use ``compare_MTL_general`` (to obtain as example Table~3 of the main paper). For a simple version (fast algorithm) but considering a naive multi class extension please see function ``RMTMTLLSSVM_train.m`` and to test the script ``compare_MTL`` (to reproduce Table 1 and 4).
 
 # Code CompareMTL.m
